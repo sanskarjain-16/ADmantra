@@ -51,82 +51,133 @@
 </header>
 
 <!-- Slide-Out Side Navigation Drawer & Backdrop Overlay -->
-<div id="side-drawer-backdrop" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 opacity-0 pointer-events-none transition-opacity duration-300" onclick="toggleDrawer(false)"></div>
+<div id="side-drawer-backdrop" class="fixed inset-0 bg-black/75 backdrop-blur-sm z-50 opacity-0 pointer-events-none transition-opacity duration-300" onclick="toggleDrawer(false)"></div>
 
-<aside id="side-drawer" class="fixed top-0 bottom-0 left-0 w-80 max-w-[85vw] bg-white z-50 shadow-2xl flex flex-col justify-between -translate-x-full transition-transform duration-300 ease-in-out border-r border-outline-variant/30" aria-label="Side Navigation Drawer">
+<aside id="side-drawer" class="fixed top-0 bottom-0 left-0 w-84 sm:w-96 max-w-[88vw] bg-[#070b1e] border-r border-white/10 text-white z-50 shadow-2xl flex flex-col justify-between -translate-x-full transition-transform duration-300 ease-in-out" aria-label="Side Navigation Drawer">
   <!-- Drawer Header -->
-  <div class="h-20 px-6 border-b border-outline-variant/20 flex items-center justify-between">
-    <div class="flex items-center gap-2">
-      <img alt="Admantra Media Logo" class="h-8 w-auto object-contain rounded-lg" src="https://lh3.googleusercontent.com/aida/ALJJyrCVUomFv_jacykc_UGthxOHTDebQcLE--cnO9u-i-HhUFt-uVQAXMaEOFeiGkxXT7b7ug4gBcdUGUOTJOFnjuUQ9qbrNIENklUCABe6z6FpGc9t36YwdQ7vYOTwy6Ws_EsvYXbehqIRvcpE6WNOVyQXh6TNf4-B0kS2HaBsZShjia4-UCnZztlIb0ginHbOccBO6al14lgqVtPRLRprznkcGaK4F4jvKDbbIpqFr77A">
-      <span class="text-lg font-extrabold tracking-tight text-on-surface">ADMANTRA</span>
-      <span class="text-[10px] font-bold uppercase bg-gradient-to-r from-primary-container to-secondary-container text-white px-2 py-0.5 rounded-full tracking-wider">MEDIA</span>
+  <div class="h-20 px-6 border-b border-white/10 flex items-center justify-between shrink-0 bg-[#050816]/50">
+    <div class="flex items-center gap-2.5">
+      <img alt="Admantra Media Logo" class="h-8 w-auto object-contain rounded-xl shadow-sm" src="https://lh3.googleusercontent.com/aida/ALJJyrCVUomFv_jacykc_UGthxOHTDebQcLE--cnO9u-i-HhUFt-uVQAXMaEOFeiGkxXT7b7ug4gBcdUGUOTJOFnjuUQ9qbrNIENklUCABe6z6FpGc9t36YwdQ7vYOTwy6Ws_EsvYXbehqIRvcpE6WNOVyQXh6TNf4-B0kS2HaBsZShjia4-UCnZztlIb0ginHbOccBO6al14lgqVtPRLRprznkcGaK4F4jvKDbbIpqFr77A">
+      <span class="text-base font-extrabold tracking-tight text-white">ADMANTRA</span>
+      <span class="text-[9px] font-bold uppercase bg-gradient-to-r from-primary-container to-secondary-container text-white px-2 py-0.5 rounded-full tracking-wider shadow-sm">MEDIA</span>
     </div>
-    <button onclick="toggleDrawer(false)" class="p-2 rounded-xl text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors" aria-label="Close menu">
+    <button onclick="toggleDrawer(false)" class="p-2 rounded-xl text-slate-400 hover:text-white hover:bg-white/10 transition-colors focus:outline-none" aria-label="Close menu">
       <span class="material-symbols-outlined text-[24px]">close</span>
     </button>
   </div>
 
   <!-- Drawer Links -->
-  <nav class="flex-1 overflow-y-auto px-6 py-6 space-y-1.5 text-sm font-semibold">
-    <a onclick="toggleDrawer(false)" href="<?php echo esc_url( home_url( '/' ) ); ?>" class="flex items-center justify-between px-4 py-3 rounded-xl text-primary bg-primary-fixed/30 font-bold transition-all">
+  <nav class="flex-1 overflow-y-auto px-5 py-5 space-y-2 text-sm font-semibold custom-scrollbar">
+    <!-- 1. Home -->
+    <a onclick="toggleDrawer(false)" href="<?php echo esc_url( home_url( '/' ) ); ?>" class="flex items-center justify-between px-4 py-3 rounded-xl text-white hover:text-cyan-400 hover:bg-white/5 transition-all group">
       <span class="flex items-center gap-3">
-        <span class="material-symbols-outlined text-[20px]">home</span>
-        Home
+        <span class="material-symbols-outlined text-[20px] text-cyan-400">home</span>
+        <span>Home</span>
       </span>
-      <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+      <span class="material-symbols-outlined text-[16px] text-white/30 group-hover:text-cyan-400 group-hover:translate-x-0.5 transition-all">chevron_right</span>
     </a>
-    <a onclick="toggleDrawer(false)" href="<?php echo esc_url( home_url( '/#specializations' ) ); ?>" class="flex items-center justify-between px-4 py-3 rounded-xl text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-all">
+
+    <!-- 2. Expertise (Expandable / Grouped Section) -->
+    <div class="rounded-xl overflow-hidden bg-white/[0.02] border border-white/5">
+      <button type="button" onclick="toggleExpertiseSubmenu()" class="w-full flex items-center justify-between px-4 py-3 text-white hover:text-cyan-400 hover:bg-white/5 transition-all group focus:outline-none" aria-expanded="true">
+        <span class="flex items-center gap-3">
+          <span class="material-symbols-outlined text-[20px] text-cyan-400">bolt</span>
+          <span>Expertise</span>
+        </span>
+        <span id="expertise-chevron" class="material-symbols-outlined text-[18px] text-white/50 group-hover:text-cyan-400 transition-transform duration-300 rotate-180">expand_more</span>
+      </button>
+
+      <div id="expertise-submenu" class="px-3 pb-3 pt-1 space-y-4 border-t border-white/5 text-xs transition-all duration-300">
+        <!-- Core Specializations -->
+        <div>
+          <div class="px-2 pb-1.5 pt-1 text-[10px] font-mono uppercase tracking-wider text-cyan-400 font-bold flex items-center gap-1.5">
+            <span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>
+            <span>Core Specializations</span>
+          </div>
+          <div class="space-y-0.5">
+            <a onclick="toggleDrawer(false)" href="<?php echo esc_url( home_url( '/#specializations' ) ); ?>" class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-white/5 transition-all">
+              <span class="w-1 h-1 rounded-full bg-slate-500"></span>
+              <span>Personal Branding &amp; Authority</span>
+            </a>
+            <a onclick="toggleDrawer(false)" href="<?php echo esc_url( home_url( '/#specializations' ) ); ?>" class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-white/5 transition-all">
+              <span class="w-1 h-1 rounded-full bg-slate-500"></span>
+              <span>Performance Marketing &amp; Customer Acquisition</span>
+            </a>
+            <a onclick="toggleDrawer(false)" href="<?php echo esc_url( home_url( '/#specializations' ) ); ?>" class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-white/5 transition-all">
+              <span class="w-1 h-1 rounded-full bg-slate-500"></span>
+              <span>AI Visibility &amp; ChatGPT Solutions</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Extended Capabilities -->
+        <div>
+          <div class="px-2 pb-1.5 pt-1 text-[10px] font-mono uppercase tracking-wider text-purple-400 font-bold flex items-center gap-1.5">
+            <span class="w-1.5 h-1.5 rounded-full bg-purple-400"></span>
+            <span>Extended Capabilities</span>
+          </div>
+          <div class="space-y-0.5">
+            <a onclick="toggleDrawer(false)" href="<?php echo esc_url( home_url( '/#services' ) ); ?>" class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-white/5 transition-all">
+              <span class="w-1 h-1 rounded-full bg-slate-500"></span>
+              <span>Video Production &amp; Content Creation</span>
+            </a>
+            <a onclick="toggleDrawer(false)" href="<?php echo esc_url( home_url( '/#services' ) ); ?>" class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-white/5 transition-all">
+              <span class="w-1 h-1 rounded-full bg-slate-500"></span>
+              <span>SEO &amp; Organic Growth</span>
+            </a>
+            <a onclick="toggleDrawer(false)" href="<?php echo esc_url( home_url( '/#services' ) ); ?>" class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-white/5 transition-all">
+              <span class="w-1 h-1 rounded-full bg-slate-500"></span>
+              <span>Website &amp; Landing Page Development</span>
+            </a>
+            <a onclick="toggleDrawer(false)" href="<?php echo esc_url( home_url( '/#services' ) ); ?>" class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-white/5 transition-all">
+              <span class="w-1 h-1 rounded-full bg-slate-500"></span>
+              <span>Creative &amp; Brand Communication</span>
+            </a>
+            <a onclick="toggleDrawer(false)" href="<?php echo esc_url( home_url( '/#services' ) ); ?>" class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-white/5 transition-all">
+              <span class="w-1 h-1 rounded-full bg-slate-500"></span>
+              <span>AI Automation &amp; Business Systems</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. Work (Our Work / Case Studies) -->
+    <a onclick="toggleDrawer(false)" href="<?php echo esc_url( home_url( '/#who-we-empower' ) ); ?>" class="flex items-center justify-between px-4 py-3 rounded-xl text-white hover:text-cyan-400 hover:bg-white/5 transition-all group">
       <span class="flex items-center gap-3">
-        <span class="material-symbols-outlined text-[20px]">hub</span>
-        Specializations
+        <span class="material-symbols-outlined text-[20px] text-cyan-400">cases</span>
+        <span>Work</span>
       </span>
-      <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+      <span class="text-[10px] font-mono text-slate-400 group-hover:text-cyan-400 transition-colors">Case Studies</span>
     </a>
-    <a onclick="toggleDrawer(false)" href="<?php echo esc_url( home_url( '/#philosophy' ) ); ?>" class="flex items-center justify-between px-4 py-3 rounded-xl text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-all">
+
+    <!-- 4. About -->
+    <a onclick="toggleDrawer(false)" href="<?php echo esc_url( home_url( '/#philosophy' ) ); ?>" class="flex items-center justify-between px-4 py-3 rounded-xl text-white hover:text-cyan-400 hover:bg-white/5 transition-all group">
       <span class="flex items-center gap-3">
-        <span class="material-symbols-outlined text-[20px]">psychology</span>
-        Philosophy &amp; Formula
+        <span class="material-symbols-outlined text-[20px] text-cyan-400">info</span>
+        <span>About</span>
       </span>
-      <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+      <span class="material-symbols-outlined text-[16px] text-white/30 group-hover:text-cyan-400 group-hover:translate-x-0.5 transition-all">chevron_right</span>
     </a>
-    <a onclick="toggleDrawer(false)" href="<?php echo esc_url( home_url( '/#why-admantra' ) ); ?>" class="flex items-center justify-between px-4 py-3 rounded-xl text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-all">
+
+    <!-- 5. Insights -->
+    <a onclick="toggleDrawer(false)" href="<?php echo esc_url( home_url( '/#market-dynamics' ) ); ?>" class="flex items-center justify-between px-4 py-3 rounded-xl text-white hover:text-cyan-400 hover:bg-white/5 transition-all group">
       <span class="flex items-center gap-3">
-        <span class="material-symbols-outlined text-[20px]">verified</span>
-        Why Admantra
+        <span class="material-symbols-outlined text-[20px] text-cyan-400">lightbulb</span>
+        <span>Insights</span>
       </span>
-      <span class="material-symbols-outlined text-[16px]">chevron_right</span>
-    </a>
-    <a onclick="toggleDrawer(false)" href="<?php echo esc_url( home_url( '/#protocol' ) ); ?>" class="flex items-center justify-between px-4 py-3 rounded-xl text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-all">
-      <span class="flex items-center gap-3">
-        <span class="material-symbols-outlined text-[20px]">rocket_launch</span>
-        5-Step Protocol
-      </span>
-      <span class="material-symbols-outlined text-[16px]">chevron_right</span>
-    </a>
-    <a onclick="toggleDrawer(false)" href="<?php echo esc_url( home_url( '/#market-dynamics' ) ); ?>" class="flex items-center justify-between px-4 py-3 rounded-xl text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-all">
-      <span class="flex items-center gap-3">
-        <span class="material-symbols-outlined text-[20px]">query_stats</span>
-        Market Dynamics
-      </span>
-      <span class="material-symbols-outlined text-[16px]">chevron_right</span>
-    </a>
-    <a onclick="toggleDrawer(false)" href="<?php echo esc_url( home_url( '/#contact' ) ); ?>" class="flex items-center justify-between px-4 py-3 rounded-xl text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-all">
-      <span class="flex items-center gap-3">
-        <span class="material-symbols-outlined text-[20px]">mail</span>
-        Contact Us
-      </span>
-      <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+      <span class="text-[10px] font-mono text-slate-400 group-hover:text-cyan-400 transition-colors">Knowledge</span>
     </a>
   </nav>
 
-  <!-- Drawer Footer -->
-  <div class="p-6 border-t border-outline-variant/20 bg-surface-container-low/50 space-y-3">
-    <div class="flex items-center gap-2 text-xs font-semibold text-on-surface-variant">
-      <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
-      <span>Growth Active • 2026</span>
+  <!-- 6. Contact / Let's Grow Together (Primary CTA Link) -->
+  <div class="p-5 border-t border-white/10 bg-[#050816]/80 space-y-3 shrink-0">
+    <div class="flex items-center justify-between text-xs text-slate-400 font-mono">
+      <span class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>Partner Ingestion Open</span>
+      <span class="text-cyan-400 font-semibold">2026</span>
     </div>
-    <a onclick="toggleDrawer(false)" href="<?php echo esc_url( home_url( '/#contact' ) ); ?>" class="flex items-center justify-center gap-2 w-full py-3 px-4 rounded-xl font-bold text-sm text-white bg-gradient-to-r from-primary to-secondary shadow-md hover:shadow-lg transition-all">
-      <span>Let's Grow Together</span>
+    <a onclick="toggleDrawer(false)" href="<?php echo esc_url( home_url( '/#contact' ) ); ?>" class="flex items-center justify-center gap-2 w-full py-3.5 px-4 rounded-xl font-bold text-sm text-white bg-gradient-to-r from-blue-600 via-indigo-600 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 shadow-lg shadow-blue-500/25 active:scale-[0.98] transition-all">
+      <span>Contact / Let's Grow Together</span>
       <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
     </a>
   </div>
@@ -155,6 +206,21 @@
   document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape') toggleDrawer(false);
   });
+
+  function toggleExpertiseSubmenu() {
+    const submenu = document.getElementById('expertise-submenu');
+    const chevron = document.getElementById('expertise-chevron');
+    if (!submenu || !chevron) return;
+    const isHidden = submenu.classList.contains('hidden');
+    if (isHidden) {
+      submenu.classList.remove('hidden');
+      chevron.classList.add('rotate-180');
+    } else {
+      submenu.classList.add('hidden');
+      chevron.classList.remove('rotate-180');
+    }
+  }
+
 
   function handleNavScroll() {
     const header = document.getElementById('main-header');
