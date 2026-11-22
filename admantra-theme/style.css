@@ -276,13 +276,13 @@ Tags: one-column, custom-colors, custom-menu, custom-logo, featured-images, full
       display: flex !important;
       width: max-content !important;
       will-change: transform;
-      animation: kinetic-stream-left 28s linear infinite !important;
+      animation: kinetic-stream-left 65s linear infinite !important;
     }
     .kinetic-stream-2 {
       display: flex !important;
       width: max-content !important;
       will-change: transform;
-      animation: kinetic-stream-right 32s linear infinite !important;
+      animation: kinetic-stream-right 72s linear infinite !important;
     }
     .kinetic-stream-1 span,
     .kinetic-stream-2 span {
@@ -291,20 +291,20 @@ Tags: one-column, custom-colors, custom-menu, custom-logo, featured-images, full
     }
     .gyro-container { perspective: 1000px; transform-style: preserve-3d; }
     .gyro-ring { position: absolute; border-radius: 50%; border: 1.5px dashed rgba(56, 189, 248, 0.4); transform-style: preserve-3d; }
-    .gyro-ring-1 { width: 340px; height: 340px; animation: gyro-spin-1 16s linear infinite; border-color: rgba(56, 189, 248, 0.45); box-shadow: 0 0 30px rgba(56, 189, 248, 0.15), inset 0 0 30px rgba(56, 189, 248, 0.1); }
-    .gyro-ring-2 { width: 270px; height: 270px; animation: gyro-spin-2 12s linear infinite reverse; border-color: rgba(168, 85, 247, 0.45); border-style: dotted; box-shadow: 0 0 25px rgba(168, 85, 247, 0.15); }
-    .gyro-ring-3 { width: 200px; height: 200px; animation: gyro-spin-3 9s linear infinite; border-color: rgba(59, 130, 246, 0.5); }
+    .gyro-ring-1 { width: 340px; height: 340px; animation: gyro-spin-1 30s linear infinite; border-color: rgba(56, 189, 248, 0.45); box-shadow: 0 0 30px rgba(56, 189, 248, 0.15), inset 0 0 30px rgba(56, 189, 248, 0.1); }
+    .gyro-ring-2 { width: 270px; height: 270px; animation: gyro-spin-2 24s linear infinite reverse; border-color: rgba(168, 85, 247, 0.45); border-style: dotted; box-shadow: 0 0 25px rgba(168, 85, 247, 0.15); }
+    .gyro-ring-3 { width: 200px; height: 200px; animation: gyro-spin-3 18s linear infinite; border-color: rgba(59, 130, 246, 0.5); }
     @keyframes gyro-spin-1 { 0% { transform: rotateX(68deg) rotateY(15deg) rotateZ(0deg); } 100% { transform: rotateX(68deg) rotateY(15deg) rotateZ(360deg); } }
     @keyframes gyro-spin-2 { 0% { transform: rotateX(45deg) rotateY(-35deg) rotateZ(0deg); } 100% { transform: rotateX(45deg) rotateY(-35deg) rotateZ(360deg); } }
     @keyframes gyro-spin-3 { 0% { transform: rotateX(75deg) rotateY(40deg) rotateZ(0deg); } 100% { transform: rotateX(75deg) rotateY(40deg) rotateZ(360deg); } }
     .kinetic-node { transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); will-change: transform; }
     .kinetic-node:hover { transform: translateY(-8px) scale(1.06) !important; box-shadow: 0 20px 40px -10px rgba(56, 189, 248, 0.4), 0 0 30px 4px rgba(168, 85, 247, 0.3); border-color: rgba(56, 189, 248, 0.8) !important; }
-    .node-float-1 { animation: n-float-1 6s ease-in-out infinite; }
-    .node-float-2 { animation: n-float-2 7s ease-in-out infinite 0.5s; }
-    .node-float-3 { animation: n-float-3 6.5s ease-in-out infinite 1s; }
-    .node-float-4 { animation: n-float-4 7.5s ease-in-out infinite 1.5s; }
-    .node-float-5 { animation: n-float-5 6.8s ease-in-out infinite 0.8s; }
-    .node-float-6 { animation: n-float-6 7.2s ease-in-out infinite 1.2s; }
+    .node-float-1 { animation: n-float-1 9s ease-in-out infinite; }
+    .node-float-2 { animation: n-float-2 10.5s ease-in-out infinite 0.5s; }
+    .node-float-3 { animation: n-float-3 9.5s ease-in-out infinite 1s; }
+    .node-float-4 { animation: n-float-4 11s ease-in-out infinite 1.5s; }
+    .node-float-5 { animation: n-float-5 10s ease-in-out infinite 0.8s; }
+    .node-float-6 { animation: n-float-6 10.8s ease-in-out infinite 1.2s; }
     @keyframes n-float-1 { 0%, 100% { transform: translateY(0px) rotate(0deg); } 50% { transform: translateY(-16px) rotate(1deg); } }
     @keyframes n-float-2 { 0%, 100% { transform: translateY(0px) rotate(0deg); } 50% { transform: translateY(-20px) rotate(-1.5deg); } }
     @keyframes n-float-3 { 0%, 100% { transform: translateY(0px) rotate(0deg); } 50% { transform: translateY(-14px) rotate(1.2deg); } }
@@ -312,7 +312,7 @@ Tags: one-column, custom-colors, custom-menu, custom-logo, featured-images, full
     @keyframes n-float-5 { 0%, 100% { transform: translateY(0px) rotate(0deg); } 50% { transform: translateY(-15px) rotate(1.4deg); } }
     @keyframes n-float-6 { 0%, 100% { transform: translateY(0px) rotate(0deg); } 50% { transform: translateY(-22px) rotate(-1.2deg); } }
     @keyframes radar-sweep { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
-    .radar-sweep-beam { animation: radar-sweep 8s linear infinite; transform-origin: center center; }
+    .radar-sweep-beam { animation: radar-sweep 16s linear infinite; transform-origin: center center; }
     @keyframes laser-pulse-flow { 0% { stroke-dashoffset: 200; opacity: 0.3; } 50% { opacity: 0.95; filter: drop-shadow(0 0 8px rgba(56, 189, 248, 0.9)); } 100% { stroke-dashoffset: 0; opacity: 0.3; } }
     .laser-line-anim { stroke-dasharray: 12 12; animation: laser-pulse-flow 4s linear infinite; }
 

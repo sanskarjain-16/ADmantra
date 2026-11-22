@@ -51,9 +51,9 @@
 </header>
 
 <!-- Slide-Out Side Navigation Drawer & Backdrop Overlay -->
-<div id="side-drawer-backdrop" class="fixed inset-0 bg-black/75 backdrop-blur-sm z-50 opacity-0 pointer-events-none transition-opacity duration-300" onclick="toggleDrawer(false)"></div>
+<div id="side-drawer-backdrop" class="fixed inset-0 bg-black/75 backdrop-blur-sm z-[100] opacity-0 pointer-events-none transition-opacity duration-300" onclick="toggleDrawer(false)"></div>
 
-<aside id="side-drawer" class="fixed top-0 bottom-0 left-0 w-84 sm:w-96 max-w-[88vw] bg-[#070b1e] border-r border-white/10 text-white z-50 shadow-2xl flex flex-col justify-between -translate-x-full transition-transform duration-300 ease-in-out" aria-label="Side Navigation Drawer">
+<aside id="side-drawer" class="fixed top-0 bottom-0 left-0 w-80 sm:w-96 max-w-[88vw] bg-[#070b1e] border-r border-white/10 text-white z-[110] shadow-2xl flex flex-col justify-between -translate-x-full transition-transform duration-300 ease-in-out" aria-label="Side Navigation Drawer">
   <!-- Drawer Header -->
   <div class="h-20 px-6 border-b border-white/10 flex items-center justify-between shrink-0 bg-[#050816]/50">
     <div class="flex items-center gap-2.5">

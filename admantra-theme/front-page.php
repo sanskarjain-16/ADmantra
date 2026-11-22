@@ -26,98 +26,128 @@ if ( have_posts() ) {
 if ( ! $has_custom_content ) :
 ?>
 <main class="w-full">
-  <section id="hero" class="relative w-full overflow-hidden py-20 lg:py-28 min-h-[680px] flex items-center justify-center bg-inverse-surface">
-    <!-- Subtle Architectural Background Grids and Soft Light Accent -->
+  <section id="hero" class="relative w-full overflow-hidden py-20 lg:py-28 min-h-[720px] flex items-center justify-center bg-[#050816]">
+    <!-- Original Executive Digital Intelligence Nexus & Command Center (Enhanced 4K Ultra-Res) -->
     <div class="absolute inset-0 z-0">
-      <img alt="Admantra Executive Digital Intelligence Nexus & Command Center" class="absolute inset-0 w-full h-full object-cover object-center pointer-events-none opacity-60" src="https://lh3.googleusercontent.com/aida/ALJJyrAJgJU8RiURHzJ5Wp86dYctiGvth2_2Xoaoan7WF0rtQJQINV4ZlKYwlsDBBNmj6DrVVTXMjg_lyZQnKZerSEUUZlIfyWiZYkkDisRnYyUFDJrS4aN-JCVS-ej07eDQ5FZ0gpTyMuGxkdENUI_JKPooBrlZKuU01bp5PQCWZq6Kb0eyP1c0PVK3pa--ifQs0wWl7k6Kg8LIS1lxwkeE3zguEHfJwomEhrlTizVey5UN5w">
-      <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/50 to-black/75 pointer-events-none"></div>
-      <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-black/50 pointer-events-none"></div>
+      <img alt="Admantra Executive Digital Intelligence Nexus & Command Center" class="absolute inset-0 w-full h-full object-cover object-center pointer-events-none opacity-85 scale-100 transition-transform duration-1000 ease-out" src="https://lh3.googleusercontent.com/aida/ALJJyrAJgJU8RiURHzJ5Wp86dYctiGvth2_2Xoaoan7WF0rtQJQINV4ZlKYwlsDBBNmj6DrVVTXMjg_lyZQnKZerSEUUZlIfyWiZYkkDisRnYyUFDJrS4aN-JCVS-ej07eDQ5FZ0gpTyMuGxkdENUI_JKPooBrlZKuU01bp5PQCWZq6Kb0eyP1c0PVK3pa--ifQs0wWl7k6Kg8LIS1lxwkeE3zguEHfJwomEhrlTizVey5UN5w=s3840" style="image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges; filter: contrast(1.12) brightness(1.06) saturate(1.12);" fetchpriority="high" decoding="sync">
+      <!-- Balanced Cinematic Overlay preserving full 4K background fidelity -->
+      <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/35 to-black/60 pointer-events-none"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-[#050816] via-transparent to-black/35 pointer-events-none"></div>
     </div>
 
     <!-- Editorial Hero Container -->
     <div class="max-w-7xl mx-auto px-6 lg:px-12 relative z-10 w-full py-6">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
         <!-- Left Column: Editorial Headline & Actions -->
         <div class="lg:col-span-7 flex flex-col items-start space-y-6 w-full max-w-2xl">
-          <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 shadow-sm">
+          <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-cyan-400/30 shadow-[0_0_15px_rgba(56,189,248,0.2)]">
             <span class="relative flex h-2.5 w-2.5">
-              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
-              <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-blue-400"></span>
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-cyan-400"></span>
             </span>
-            <span class="text-xs font-bold uppercase tracking-widest text-blue-200">We Build Brands That Move Business Forward</span>
+            <span class="text-xs font-bold uppercase tracking-widest text-cyan-200">We Build Brands That Move Business Forward</span>
           </div>
 
           <h1 class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black text-white leading-tight tracking-tight pb-2 overflow-visible">
             <span class="inline-block pb-1">Your Brand Deserves More Than Just </span>
-            <span class="shimmer-text bg-gradient-to-r from-blue-400 via-indigo-200 to-sky-300 bg-clip-text text-transparent inline-block drop-shadow-[0_0_20px_rgba(56,189,248,0.6)] pb-2 pt-1">Digital Presence.</span>
+            <span class="shimmer-text bg-gradient-to-r from-blue-400 via-cyan-200 to-indigo-300 bg-clip-text text-transparent inline-block drop-shadow-[0_0_25px_rgba(56,189,248,0.6)] pb-2 pt-1">Digital Presence.</span>
           </h1>
 
-          <p class="text-base sm:text-lg text-white/85 leading-relaxed max-w-2xl">
+          <p class="text-base sm:text-lg text-slate-200/90 leading-relaxed max-w-2xl font-normal">
             We turn ambitious brands into authoritative category leaders through strategic performance and AI-driven growth.
           </p>
 
           <div class="flex flex-wrap items-center gap-4 pt-2">
-            <a class="cta-glow inline-flex items-center gap-2.5 bg-gradient-to-r from-primary via-primary-container to-secondary text-white px-7 py-3.5 rounded-xl font-extrabold text-sm hover:-translate-y-0.5 active:scale-95 transition-all group border border-cyan-400 shadow-[0_0_25px_rgba(18,66,255,0.6)]" href="#contact">
+            <a class="cta-glow inline-flex items-center gap-2.5 bg-gradient-to-r from-blue-600 via-indigo-600 to-cyan-500 text-white px-8 py-4 rounded-xl font-extrabold text-sm hover:-translate-y-0.5 active:scale-95 transition-all group border border-cyan-400/60 shadow-[0_0_30px_rgba(56,189,248,0.4)] hover:shadow-[0_0_40px_rgba(56,189,248,0.6)]" href="#contact">
               <span class="tracking-wide">Let's Grow Together</span>
-              <span class="material-symbols-outlined text-[18px] text-cyan-300 drop-shadow-[0_0_6px_rgba(34,211,238,0.5)] group-hover:translate-x-1 transition-transform">trending_up</span>
+              <span class="material-symbols-outlined text-[18px] text-cyan-200 group-hover:translate-x-1 transition-transform">trending_up</span>
             </a>
-            <a class="inline-flex items-center gap-2 bg-white/15 hover:bg-white/25 backdrop-blur-md text-cyan-300 px-6 py-3.5 rounded-xl font-bold text-sm border border-blue-400/60 shadow-[0_0_15px_rgba(56,189,248,0.2)] hover:shadow-[0_0_20px_rgba(56,189,248,0.4)] hover:border-cyan-400 hover:-translate-y-0.5 active:scale-95 transition-all group" href="#specializations">
-              <span class="drop-shadow-[0_0_6px_rgba(34,211,238,0.5)]">Explore Our Expertise</span>
-              <span class="material-symbols-outlined text-[18px] text-cyan-400 drop-shadow-[0_0_6px_rgba(34,211,238,0.5)] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+            <a class="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-md text-cyan-300 px-7 py-4 rounded-xl font-bold text-sm border border-cyan-400/40 shadow-[0_0_20px_rgba(56,189,248,0.15)] hover:shadow-[0_0_30px_rgba(56,189,248,0.3)] hover:border-cyan-300 hover:-translate-y-0.5 active:scale-95 transition-all group" href="#specializations">
+              <span>Explore Our Expertise</span>
+              <span class="material-symbols-outlined text-[18px] text-cyan-400 group-hover:translate-x-1 transition-transform">arrow_forward</span>
             </a>
+          </div>
+
+          <!-- Micro Trust Pillars -->
+          <div class="pt-4 flex flex-wrap items-center gap-5 sm:gap-6 text-xs text-slate-300/80 font-mono">
+            <div class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>
+              <span>100% Bespoke Playbooks</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>
+              <span>$85M+ Ingested Pipeline</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>
+              <span>Zero Cookie-Cutter Fluff</span>
+            </div>
           </div>
         </div>
 
-        <!-- Right Column: Minimalist Strategy Session Form Card -->
+        <!-- Right Column: 100% Transparent Glass Strategy Session Form Card -->
         <div class="lg:col-span-5">
-          <div class="w-full max-w-xl lg:max-w-none mx-auto border border-white/20 rounded-3xl p-7 sm:p-9 pb-8 sm:pb-12 shadow-2xl relative space-y-6 shadow-[0_0_20px_rgba(56,189,248,0.2)] transition-all duration-300 hover:border-blue-300 hover:shadow-2xl bg-black/30 backdrop-blur-xl">
+          <div class="w-full max-w-xl lg:max-w-none mx-auto border border-white/20 rounded-3xl p-7 sm:p-9 pb-8 sm:pb-10 relative space-y-6 transition-all duration-300 hover:border-cyan-400/50 bg-transparent shadow-[0_8px_32px_rgba(0,0,0,0.3)]">
             <div class="space-y-2 pb-1">
-              <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/15 text-blue-200 text-xs font-bold uppercase tracking-wider">
-                <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
-                <span class="leading-normal">Fast-Track Growth</span>
+              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.05] border border-white/20 text-cyan-300 text-xs font-mono font-bold uppercase tracking-wider">
+                <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+                <span>Fast-Track Growth</span>
               </div>
-              <h3 class="text-xl sm:text-2xl font-bold text-white tracking-tight leading-snug pb-1 pt-1">Schedule a Strategy Session</h3>
-              <p class="text-xs sm:text-sm text-white/85 leading-relaxed pb-1">Connect directly with our senior growth architects within 24 hours.</p>
+              <h3 class="text-xl sm:text-2xl font-bold text-white tracking-tight leading-snug pb-1 pt-1 drop-shadow-md">Schedule a Strategy Session</h3>
+              <p class="text-xs sm:text-sm text-slate-200 leading-relaxed pb-1 drop-shadow-sm">Connect directly with our senior growth architects within 24 hours.</p>
             </div>
             <form class="space-y-4" onsubmit="alert('Thank you! Our growth architects will contact you shortly.'); return false;">
+              <!-- Full Name Input Card -->
               <div class="space-y-1.5">
-                <label class="flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-cyan-300 drop-shadow-[0_0_6px_rgba(34,211,238,0.5)]">
-                  <span class="material-symbols-outlined text-[14px] text-cyan-400 drop-shadow-[0_0_8px_rgba(34,211,238,0.6)]">person</span>
+                <label class="flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-cyan-200 drop-shadow-sm">
+                  <span class="material-symbols-outlined text-[16px] text-cyan-400">person</span>
                   <span>Full Name</span>
                 </label>
-                <input class="w-full border rounded-xl px-4 py-3 text-sm text-white font-medium placeholder:text-white/60 outline-none focus:ring-2 focus:ring-primary transition-all bg-black/40 border-white/30" placeholder="e.g. Alexander Vance" required="" type="text">
+                <div class="relative">
+                  <input class="w-full bg-[#060b24]/75 hover:bg-[#060b24]/90 focus:bg-[#060b24] border border-white/35 hover:border-cyan-400/70 focus:border-cyan-400 rounded-xl px-4 py-3.5 text-sm text-white font-medium placeholder:text-white/60 outline-none focus:ring-2 focus:ring-cyan-400/40 shadow-sm transition-all" placeholder="e.g. Alexander Vance" required="" type="text">
+                </div>
               </div>
+
+              <!-- Phone Number Input Card -->
               <div class="space-y-1.5">
-                <label class="flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-cyan-300 drop-shadow-[0_0_6px_rgba(34,211,238,0.5)]">
-                  <span class="material-symbols-outlined text-[14px] text-cyan-400 drop-shadow-[0_0_8px_rgba(34,211,238,0.6)]">call</span>
+                <label class="flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-cyan-200 drop-shadow-sm">
+                  <span class="material-symbols-outlined text-[16px] text-cyan-400">call</span>
                   <span>Direct Phone Number</span>
                 </label>
-                <input class="w-full border rounded-xl px-4 py-3 text-sm text-white font-medium placeholder:text-white/60 outline-none focus:ring-2 focus:ring-primary transition-all bg-black/40 border-white/30" placeholder="+1 (555) 019-2834" type="tel">
+                <div class="relative">
+                  <input class="w-full bg-[#060b24]/75 hover:bg-[#060b24]/90 focus:bg-[#060b24] border border-white/35 hover:border-cyan-400/70 focus:border-cyan-400 rounded-xl px-4 py-3.5 text-sm text-white font-medium placeholder:text-white/60 outline-none focus:ring-2 focus:ring-cyan-400/40 shadow-sm transition-all" placeholder="+1 (555) 019-2834" type="tel">
+                </div>
               </div>
+
+              <!-- Growth Objective Input Card -->
               <div class="space-y-1.5">
-                <label class="flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-cyan-300 drop-shadow-[0_0_6px_rgba(34,211,238,0.5)]">
-                  <span class="material-symbols-outlined text-[14px] text-cyan-400 drop-shadow-[0_0_8px_rgba(34,211,238,0.6)]">tune</span>
+                <label class="flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-cyan-200 drop-shadow-sm">
+                  <span class="material-symbols-outlined text-[16px] text-cyan-400">tune</span>
                   <span>Growth Objective</span>
                 </label>
-                <select class="w-full bg-black/40 border border-white/30 rounded-xl px-4 py-3 text-sm text-white font-medium outline-none focus:ring-2 focus:ring-primary transition-all">
-                  <option class="bg-inverse-surface text-white/80" value="">Select Growth Objective</option>
-                  <option class="bg-inverse-surface text-white" value="branding">Personal Branding &amp; Authority</option>
-                  <option class="bg-inverse-surface text-white" value="performance">Performance Marketing &amp; Demand</option>
-                  <option class="bg-inverse-surface text-white" value="ai">AI Visibility &amp; GEO</option>
-                  <option class="bg-inverse-surface text-white" value="enterprise">Comprehensive Enterprise Retainer</option>
-                </select>
+                <div class="relative">
+                  <select class="w-full bg-[#060b24]/75 hover:bg-[#060b24]/90 focus:bg-[#060b24] border border-white/35 hover:border-cyan-400/70 focus:border-cyan-400 rounded-xl px-4 py-3.5 text-sm text-white font-medium outline-none focus:ring-2 focus:ring-cyan-400/40 shadow-sm transition-all cursor-pointer">
+                    <option class="bg-[#080d24] text-white/80" value="">Select Growth Objective</option>
+                    <option class="bg-[#080d24] text-white" value="branding">Personal Branding &amp; Authority</option>
+                    <option class="bg-[#080d24] text-white" value="performance">Performance Marketing &amp; Demand</option>
+                    <option class="bg-[#080d24] text-white" value="ai">AI Visibility &amp; GEO</option>
+                    <option class="bg-[#080d24] text-white" value="enterprise">Comprehensive Enterprise Retainer</option>
+                  </select>
+                </div>
               </div>
-              <button class="cta-glow w-full inline-flex items-center justify-center gap-2.5 bg-gradient-to-r from-primary via-primary-container to-secondary text-cyan-300 py-3.5 px-6 rounded-xl font-black text-sm hover:-translate-y-0.5 active:scale-95 transition-all group border border-cyan-400 mt-2 shadow-[0_0_25px_rgba(18,66,255,0.6)]" type="submit">
-                <span class="leading-normal drop-shadow-[0_0_8px_rgba(34,211,238,0.6)] font-extrabold tracking-wide">Request Diagnostic Call</span>
-                <span class="material-symbols-outlined text-[18px] text-cyan-400 drop-shadow-[0_0_8px_rgba(34,211,238,0.6)] group-hover:translate-x-1.5 transition-transform">east</span>
+
+              <button class="cta-glow w-full inline-flex items-center justify-center gap-2.5 bg-gradient-to-r from-blue-600 via-indigo-600 to-cyan-500 text-white py-3.5 px-6 rounded-xl font-black text-sm hover:-translate-y-0.5 active:scale-95 transition-all group border border-cyan-400/50 mt-2 shadow-[0_0_25px_rgba(56,189,248,0.4)] hover:shadow-[0_0_35px_rgba(56,189,248,0.6)] cursor-pointer" type="submit">
+                <span class="leading-normal font-extrabold tracking-wide">Request Diagnostic Call</span>
+                <span class="material-symbols-outlined text-[18px] text-cyan-200 group-hover:translate-x-1.5 transition-transform">east</span>
               </button>
             </form>
-            <p class="text-[11px] text-white/75 text-center flex items-center justify-center gap-1.5 pt-2 pb-1 leading-normal">
-              <span class="material-symbols-outlined text-[14px] text-blue-300">lock</span>
+            <p class="text-[11px] text-slate-300/80 text-center flex items-center justify-center gap-1.5 pt-2 pb-1 leading-normal font-mono">
+              <span class="material-symbols-outlined text-[14px] text-cyan-400">lock</span>
               <span>Zero obligation · NDA-backed · Direct partner response</span>
             </p>
           </div>
         </div>
+</div>
       </div>
     </div>
   </section>
